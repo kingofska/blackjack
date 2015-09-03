@@ -34,9 +34,9 @@
             <h2>{{playerData.name}}</h2>
 
             <div class="col-md-3 total">
-                <div class="row">Score: {{playerData.playerState.total}}</div>
-                <div class="row busted" ng-show="playerData.playerState.state == 'BUSTED'">BUSTED</div>
-                <div class="row" ng-show="playerData.playerState.state == 'BLACKJACK'">BLACKJACK</div>
+                <div class="row">Score: {{playerData.total}}</div>
+                <div class="row busted" ng-show="playerData.state == 'BUSTED'">BUSTED</div>
+                <div class="row" ng-show="playerData.state == 'BLACKJACK'">BLACKJACK</div>
             </div>
             <div class="col-md-9 hand">
                 <div ng-repeat="card in playerData.cards" class="card {{card.suit}}">
