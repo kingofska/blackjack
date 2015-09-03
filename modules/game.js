@@ -6,6 +6,11 @@ var dealer = require('./dealer'),
 
 var Game = function(){
     return {
+
+        resetGame: function(){
+          dealer.resetDealer();
+            return this.startGame();
+        },
         startGame: function(){
 
             return new Promise(function(resolve, reject){
@@ -29,6 +34,8 @@ var Game = function(){
                         dealer.cards = [ deck.getCard() ];
                         dealer.save();
                     }
+
+
 
                     var dealerState = deck.checkCards(dealer.cards);
 

@@ -22,7 +22,7 @@ var Dealer = (function(){
             });
         },
         resetDealer: function(){
-            Player.remove({name: 'dealer'});
+            Player.remove({name: 'dealer'}).exec();
 
         }
     }

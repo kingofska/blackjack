@@ -30,7 +30,7 @@
         };
 
         $scope.reset = function(){
-            $http.get('/player')
+            $http.get('/reset')
                 .success(function(json) {
                     $scope.playerName=  json.playerData.name;
                     $scope.playerData = json.playerData;

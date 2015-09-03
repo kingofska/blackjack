@@ -28,6 +28,19 @@ server.route({
     }
 });
 
+server.route({
+    method: 'GET',
+    path: '/reset',
+    handler: function (request, reply) {
+
+        game.resetGame()
+            .then(function(response){
+                reply(response);
+            });
+
+    }
+});
+
 
 server.route({
     method: 'GET',
